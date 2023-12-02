@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
               style: TextStyle(fontSize: 65),
             ),
             Icon(
-              Icons.run_circle_outlined,
+              Icons.shopify_rounded,
               size: 65,
             ),
           ],
