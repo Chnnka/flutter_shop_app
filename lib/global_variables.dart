@@ -38,7 +38,7 @@ final cart = [
     'id': '3',
     'title': 'Jordon Shoes',
     'price': 420.09,
-    'imageUrl': 'assets/images/shoes_04.png',
+    'imageUrl': 'assets/images/shoes_4.png',
     'company': 'Nike',
     'size': 8,
   }

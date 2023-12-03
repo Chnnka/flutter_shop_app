@@ -35,6 +35,10 @@ final customTheme = ThemeData(
       fontSize: 18,
       fontWeight: FontWeight.w600,
     ),
+    bodySmall: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+    ),
   ),
   useMaterial3: true,
 );
