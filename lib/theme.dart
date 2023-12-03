@@ -6,6 +6,7 @@ final customTheme = ThemeData(
     seedColor: const Color.fromRGBO(255, 232, 59, 1),
     primary: const Color.fromRGBO(255, 232, 59, 1),
     secondary: const Color.fromRGBO(216, 213, 192, 1),
+    onPrimary: const Color.fromARGB(255, 46, 26, 0),
   ),
   appBarTheme: AppBarTheme(
     centerTitle: true,

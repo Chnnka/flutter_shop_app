@@ -78,7 +78,8 @@ class _HomePageState extends State<HomePage> {
                               child: Chip(
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
-                                  side: BorderSide(color: Colors.transparent),
+                                  side: const BorderSide(
+                                      color: Colors.transparent),
                                 ),
                                 backgroundColor: selectedFilter == filter
                                     ? Theme.of(context).colorScheme.primary
@@ -108,11 +109,12 @@ class _HomePageState extends State<HomePage> {
                             child: GestureDetector(
                               onTap: () {
                                 Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => ProductDetailPage(
-                                              product: product,
-                                            )));
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ProductDetailPage(product: product),
+                                  ),
+                                );
                               },
                               child: ProductCard(
                                 title: product['title'] as String,
