@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_app/cart_page.dart';
 import 'package:flutter_shop_app/cart_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -14,8 +15,49 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   int selectedSize = 0;
 
   void onTap() {
-    Provider.of<CartProvider>(context, listen: false)
-        .addProduct(widget.product);
+    if (selectedSize != 0) {
+      Provider.of<CartProvider>(context, listen: false).addProduct(
+        {
+          'id': widget.product['id'],
+          'title': widget.product['title'],
+          'price': widget.product['price'],
+          'imageUrl': widget.product['imageUrl'],
+          'company': widget.product['company'],
+          'size': selectedSize,
+        },
+      );
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.greenAccent,
+          content: Text(
+            'Item Added to the cart',
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          action: SnackBarAction(
+            label: 'Go to cart',
+            textColor: Colors.black,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const CartPage()));
+            },
+          ),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          action: SnackBarAction(
+            label: 'Close',
+            onPressed: () {},
+          ),
+          backgroundColor: Colors.redAccent,
+          content: Text(
+            'Please Select a Size',
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+        ),
+      );
+    }
   }
 
   @override

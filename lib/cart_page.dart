@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_app/global_variables.dart';
+import 'package:flutter_shop_app/cart_item_tile.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -11,33 +11,12 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cart'),
-      ),
-      body: ListView.builder(
-        itemCount: cart.length,
-        itemBuilder: (context, index) {
-          final cartItem = cart[index];
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(cartItem['imageUrl'] as String),
-              radius: 30,
-            ),
-            title: Text(
-              cartItem['title'].toString(),
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-            subtitle: Text('Size:${cartItem['size']}'),
-            trailing: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.delete,
-                  color: Colors.red,
-                )),
-          );
-        },
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Cart'),
+          leading: const Text(''),
+        ),
+        body: const CartItem());
   }
 }

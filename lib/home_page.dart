@@ -25,8 +25,8 @@ class _HomePageState extends State<HomePage> {
         iconSize: 33,
         selectedFontSize: 16,
         unselectedFontSize: 16,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
         onTap: (value) {
           setState(() {
             currentPage = value;
