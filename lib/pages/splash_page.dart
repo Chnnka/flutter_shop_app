@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_app/home_page.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+import 'pages.dart';
+
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();

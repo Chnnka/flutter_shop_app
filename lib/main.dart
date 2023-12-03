@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/cart_provider.dart';
 
-import 'package:flutter_shop_app/splash_screen.dart';
 import 'package:flutter_shop_app/theme.dart';
 import 'package:provider/provider.dart';
+
+import 'pages/pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
           theme: customTheme,
           title: 'ShopApp',
           debugShowCheckedModeBanner: false,
-          home: const SplashScreen()),
+          home: const SplashPage()),
     );
   }
 }

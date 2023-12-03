@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_app/global_variables.dart';
-import 'package:flutter_shop_app/product_card.dart';
-import 'package:flutter_shop_app/product_detail_page.dart';
+
+
+import '../widgets/widgets.dart';
+import 'pages.dart';
+
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({super.key});
